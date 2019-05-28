@@ -23,9 +23,10 @@ Route::prefix('shop')->group(function (){
     Route::get('category/{id}','Shop\ShopController@category');
 });
 //
-Route::get('/', function () {
-    return view('shop.layoutss.index');
-});
+// Route::get('/', function () {
+//     return view('shop.layouts.index');
+// });
+Route::get('/','Shop\ShopController@index')->name('shop.index');
 //
 Route::prefix('admin')->group(function(){
     // Category

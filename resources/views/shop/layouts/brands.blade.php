@@ -1,5 +1,5 @@
 <!-- brands-carousel -->
-<div class="content section-indent-bottom">
+{{-- <div class="content section-indent-bottom">
 	<div class="container">
 		<div class="row">
 			<div class="brands-carousel">
@@ -37,4 +37,4 @@
 			</div>
 		</div>
 	</div>
-</div>
+</div> --}}

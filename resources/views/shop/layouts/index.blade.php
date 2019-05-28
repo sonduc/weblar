@@ -3,7 +3,7 @@
 <head>
 	<!-- Basic -->
 	<meta charset="utf-8">
-	<title>Cửa hàng mỹ phẩm</title>
+	<title>VINMED</title>
 	<meta name="keywords" content="HTML5 Template" />
 	<meta name="description" content="YOURStore - Responsive HTML5 Template">
 	<meta name="author" content="etheme.com">
@@ -45,6 +45,9 @@
 		width: 45px;
 		margin-top: 10px;
 	}
+	.title-under:after{
+	    background: #f2b028;
+	}
 </style>
 <!-- Head Libs -->
 <!-- Modernizr -->
@@ -64,7 +67,7 @@
 		</div>
 	</div>
 	<!-- Back to top -->
-	<div class="back-to-top"><span class="icon-keyboard_arrow_up"></span></div>
+	<div style="background-color: #f2b028;" class="back-to-top"><span class="icon-keyboard_arrow_up"></span></div>
 	<!-- /Back to top -->
 	<!-- HEADER section -->
 	<div class="header-wrapper">
@@ -73,7 +76,7 @@
 			<div class="row">
 				<div class="col-sm-12 col-md-12 col-lg-12 col-xl-12" style="text-align: center;">
 					<!-- logo start -->
-					<a href="index.html"><img class="logo replace-2x img-responsive" src="images/logo.png" alt=""/> </a>
+					<a href="index.html"><img style="width: 17%" class="logo replace-2x img-responsive" src="images/logo-shop.jpg" alt=""/> </a>
 					<!-- logo end -->
 				</div>
 			</div>
@@ -151,7 +154,7 @@
 							<div class="cart link-inline">
 								<div class="dropdown text-right">
 									<a class="dropdown-toggle" >
-										<span id="menuCart" class="icon icon-shopping_basket"></span>
+										<span id="menuCart" style="color: rgb(242, 176, 40) !important" class="icon icon-shopping_basket"></span>
 										<span id="totalQtyCart" class="badge badge--cart">{{Cart::count()}}</span>
 									</a>
 								</div>

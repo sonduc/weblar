@@ -26,10 +26,10 @@
                           data-easing="Power4.easeOut"
                           data-endeasing="Power4.easeIn"
                           style="z-index: 2;">
-                          <div class="tp-caption1--wd-1">Spring -Summer 2016</div>
-                          <div class="tp-caption1--wd-2">Save 20% on</div>
-                          <div class="tp-caption1--wd-3">new arrivals </div>
-                          <a href="listing.html" class="link-button button--border-thick" data-text="Shop now!">Shop now!</a>
+                          {{-- <div class="tp-caption1--wd-1">Spring -Summer 2016</div> --}}
+                          {{-- <div class="tp-caption1--wd-2">Save 20% on</div> --}}
+                          {{-- <div class="tp-caption1--wd-3">new arrivals </div> --}}
+                          <a style="background-color: rgb(242, 176, 40);border: rgb(242, 176, 40);" href="listing.html" class="link-button button--border-thick" data-text="Shop now!">Shop now!</a>
                      </div>
             </li>
             <!-- /SLIDE -1 -->
@@ -49,10 +49,10 @@
                           data-easing="Power4.easeOut"
                           data-endeasing="Power4.easeIn"
                           style="z-index: 2;">
-                          <div class="tp-caption2--wd-1">A great selection of superb brands </div>
-                          <div class="tp-caption2--wd-2">50% off</div>
-                          <div class="tp-caption2--wd-3">on all clothes</div>
-                          <a href="listing.html" class="link-button button--border-thick pull-right" data-text="Shop now!">Shop now!</a>
+                          {{-- <div class="tp-caption2--wd-1">A great selection of superb brands </div> --}}
+                          {{-- <div class="tp-caption2--wd-2">50% off</div> --}}
+                          {{-- <div class="tp-caption2--wd-3">on all clothes</div> --}}
+                          <a style="background-color: rgb(242, 176, 40);border: rgb(242, 176, 40);" href="listing.html" class="link-button button--border-thick pull-right" data-text="Shop now!">Shop now!</a>
                      </div>
             </li>
             <!-- /SLIDE 2  -->
@@ -96,11 +96,11 @@
                           data-easing="Power4.easeOut"
                           data-endeasing="Power4.easeIn"
                           style="z-index: 2;">
-                          <div class="tp-caption3--wd-1 color-white">Spring -Summer 2016</div>
+                          {{-- <div class="tp-caption3--wd-1 color-white">Spring -Summer 2016</div>
                           <div class="tp-caption3--wd-2">Season sale!</div>
                           <div class="tp-caption3--wd-3 color-white">Get huge</div>
-                          <div class="tp-caption3--wd-3 color-white">savings!</div>
-                          <div class="text-center"><a href="listing.html" class="link-button button--border-thick" data-text="Shop now!">Shop now!</a></div>
+                          <div class="tp-caption3--wd-3 color-white">savings!</div> --}}
+                          <div class="text-center"><a style="background-color: rgb(242, 176, 40);border: rgb(242, 176, 40);" href="listing.html" class="link-button button--border-thick" data-text="Shop now!">Shop now!</a></div>
                       </div>
 
                </li>
@@ -119,7 +119,49 @@
             <div class="col-lg-12 col-xl-8">
                <!-- title -->
                <div class="title-box">
-                  <h2 class="text-center text-uppercase title-under">FEATURED PRODUCTS</h2>
+                  <h2 class="text-center text-uppercase title-under">Các sản phẩm thuốc</h2>
+               </div>
+               <!-- /title -->
+               @foreach ($products as $product)
+               <div class="col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-3">
+                  <!-- product -->
+                  <div class="product product--zoom">
+                     <div class="product__inside">
+                        <!-- product image -->
+                        <div class="product__inside__image" idImage="{{$product->id}}">
+                           <a href="#">
+                           <img class="editImage"  src="{{ asset('storage').'/' . $product->images[0]->link}}" >
+                           </a>
+                           <!-- quick-view -->
+                           <a href="#" data-toggle="modal"   data-target="#quickViewModal" class="quick-view"><b><span class="icon icon-visibility"></span> Quick view</b> </a>
+                           <!-- /quick-view -->
+                        </div>
+                        <!-- /product image -->
+                        <!-- product name -->
+                        <div class="product__inside__name">
+                           <h2><a href="{{ asset('shop/product').'/' . $product->id }}">{{ $product->name }}</a></h2>
+                        </div>
+                        <!-- /product name -->
+                        <!-- product price -->
+                        <div class="product__inside__price price-box">{{ number_format($product->price) }} VNĐ</div>
+                        <!-- /product price -->
+                        <div class="product__inside__hover">
+                           <!-- product rating -->
+                           <div class="rating row-mode-hide"> <span class="icon-star"></span> <span class="icon-star"></span> <span class="icon-star"></span> <span class="icon-star"></span> <span class="icon-star empty-star"></span> </div>
+                           <!-- /product rating -->
+                        </div>
+                     </div>
+                  </div>
+                  <!-- /product -->
+               </div>
+               @endforeach
+               <!-- /product -->
+            </div>
+
+            <div class="col-lg-12 col-xl-8">
+               <!-- title -->
+               <div class="title-box">
+                  <h2 class="text-center text-uppercase title-under">Sắc đẹp</h2>
                </div>
                <!-- /title -->
                @foreach ($products as $product)
@@ -173,7 +215,7 @@
 </div>
 </div>
 <!-- news & sale products -->
-<div class="content">
+{{-- <div class="content">
    <div class="container">
       <div class="row">
          <div class="col-sm-12 col-md-6 col-xl-4">
@@ -599,7 +641,7 @@
          </div>
       </div>
    </div>
-</div>
+</div> --}}
 <!-- /news & sale products -->
 @include('shop.layouts.brands')
 <!-- Modal (quickViewModal) -->
