@@ -25,33 +25,33 @@
 	<link rel="stylesheet" href="font/style.css">
 	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.1.4/toastr.min.css">
 	<style type="text/css">
-	.editImage{
-		height: 200px;
-	}
-	#colorProduct{
-		width: 42px;
-		height: 42px;
-		float: left;
-		border: #8080806b 1px solid;
-	}
-	#nameColor{
-		float: left;
-		margin-left: 8px;
-		line-height: 27px;
-	}
-	#chuSize{
-		clear: both;
-		float: left;
-		width: 45px;
-		margin-top: 10px;
-	}
-	.title-under:after{
-	    background: #f2b028;
-	}
-</style>
+		.editImage{
+			height: 200px;
+		}
+		#colorProduct{
+			width: 42px;
+			height: 42px;
+			float: left;
+			border: #8080806b 1px solid;
+		}
+		#nameColor{
+			float: left;
+			margin-left: 8px;
+			line-height: 27px;
+		}
+		#chuSize{
+			clear: both;
+			float: left;
+			width: 45px;
+			margin-top: 10px;
+		}
+		.title-under:after{
+		    background: #f2b028;
+		}
+	</style>
 <!-- Head Libs -->
 <!-- Modernizr -->
-<script src="external/modernizr/modernizr.js"></script>
+	<script src="external/modernizr/modernizr.js"></script>
 </head>
 <body class="index">
 	<div id="loader-wrapper">
