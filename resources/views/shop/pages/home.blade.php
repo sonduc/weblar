@@ -157,48 +157,6 @@
                @endforeach
                <!-- /product -->
             </div>
-
-            <div class="col-lg-12 col-xl-8">
-               <!-- title -->
-               <div class="title-box">
-                  <h2 class="text-center text-uppercase title-under">Sắc đẹp</h2>
-               </div>
-               <!-- /title -->
-               @foreach ($products as $product)
-               <div class="col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-3">
-                  <!-- product -->
-                  <div class="product product--zoom">
-                     <div class="product__inside">
-                        <!-- product image -->
-                        <div class="product__inside__image" idImage="{{$product->id}}">
-                           <a href="#">
-                           <img class="editImage"  src="{{ asset('storage').'/' . $product->images[0]->link}}" >
-                           </a>
-                           <!-- quick-view -->
-                           <a href="#" data-toggle="modal"   data-target="#quickViewModal" class="quick-view"><b><span class="icon icon-visibility"></span> Quick view</b> </a>
-                           <!-- /quick-view -->
-                        </div>
-                        <!-- /product image -->
-                        <!-- product name -->
-                        <div class="product__inside__name">
-                           <h2><a href="{{ asset('shop/product').'/' . $product->id }}">{{ $product->name }}</a></h2>
-                        </div>
-                        <!-- /product name -->
-                        <!-- product price -->
-                        <div class="product__inside__price price-box">{{ number_format($product->price) }} VNĐ</div>
-                        <!-- /product price -->
-                        <div class="product__inside__hover">
-                           <!-- product rating -->
-                           <div class="rating row-mode-hide"> <span class="icon-star"></span> <span class="icon-star"></span> <span class="icon-star"></span> <span class="icon-star"></span> <span class="icon-star empty-star"></span> </div>
-                           <!-- /product rating -->
-                        </div>
-                     </div>
-                  </div>
-                  <!-- /product -->
-               </div>
-               @endforeach
-               <!-- /product -->
-            </div>
          </div>
       </div>
       <!-- lookbook -->
