@@ -10,6 +10,8 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::get('logs', '\Rap2hpoutre\LaravelLogViewer\LogViewerController@index');
+
 Route::prefix('shop')->group(function (){
     Route::get('/','Shop\ShopController@index')->name('shop.index');
     Route::get('modalDetail/{id}','Shop\ShopController@modalDetail')->name('shop.modalDetail');

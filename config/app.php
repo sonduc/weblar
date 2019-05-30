@@ -164,7 +164,7 @@ return [
         Gloudemans\Shoppingcart\ShoppingcartServiceProvider::class,
 
         Barryvdh\Cors\ServiceProvider::class,
-
+        Rap2hpoutre\LaravelLogViewer\LaravelLogViewerServiceProvider::class,
     ],
 
     /*
