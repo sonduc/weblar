@@ -165,6 +165,9 @@ return [
 
         Barryvdh\Cors\ServiceProvider::class,
         Rap2hpoutre\LaravelLogViewer\LaravelLogViewerServiceProvider::class,
+
+        JD\Cloudder\CloudderServiceProvider::class,
+
     ],
 
     /*
@@ -216,6 +219,8 @@ return [
 
         'Datatables' => Yajra\Datatables\Facades\Datatables::class,
         'Cart' => Gloudemans\Shoppingcart\Facades\Cart::class,
+
+        'Cloudder' => JD\Cloudder\Facades\Cloudder::class,
     ],
 
 ];
