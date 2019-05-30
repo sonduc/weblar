@@ -85,7 +85,7 @@ class ProductController extends Controller
                 $data[] = Image::create($temp);
             }
         }
-        return response()->json($data);
+        return response()->json($data, 200);
     }
 
     /**
