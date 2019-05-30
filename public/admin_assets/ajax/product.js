@@ -157,6 +157,7 @@ $(document).ready(function() {
         $.ajax({
             type: 'post',
             url: path + 'admin/products/storeImage',
+            headers: {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')}
             dataType: 'json',
             data: newPost,
             async: false,
