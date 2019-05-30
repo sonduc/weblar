@@ -21,7 +21,7 @@
 						<div class="col-sm-6 col-md-6 col-lg-6 col-xl-6 hidden-xs">
 							<div class="product-main-image">
 								<div class="product-main-image__item">
-									<img class="product-zoom" id="anhSP" anhSP="{{ $images[0]->link}}" src="{{ asset('storage').'/' . $images[0]->link}}" alt="" />
+									<img class="product-zoom" id="anhSP" anhSP="{{ $images[0]->link}}" src="{{$images[0]->link}}" alt="" />
 								</div>
 								<div class="product-main-image__zoom"></div>
 								<input type="hidden" id="maSP" maSP="{{$product->id}}">
@@ -29,7 +29,7 @@
 							<div class="product-images-carousel">
 								<ul id="smallGallery">
 									@foreach ($images as $image)
-									<li><a href="#" data-image="{{ asset('storage').'/' .$image->link}}" data-zoom-image="{{ asset('storage').'/' .$image->link}}"><img src="{{ asset('storage').'/' .$image->link}}" alt="" /></a></li>
+									<li><a href="#" data-image="{{$image->link}}" data-zoom-image="{{$image->link}}"><img src="{{$image->link}}" alt="" /></a></li>
 									@endforeach
 
 								</ul>

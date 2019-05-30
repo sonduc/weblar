@@ -69,7 +69,7 @@
                      <div class="product__inside">
                         <!-- product image -->
                         <div class="product__inside__image">
-                           <a href="{{ asset('shop/product').'/' . $product->id }}"> <img class="editImage" src="{{ asset('storage').'/' . $product->images[0]->link}}" alt=""> </a>
+                           <a href="{{ asset('shop/product').'/' . $product->id }}"> <img class="editImage" src="{{$product->images[0]->link}}" alt=""> </a>
                            <!-- quick-view -->
                            <a href="#" data-toggle="modal" data-target="#quickViewModal" class="quick-view"><b><span class="icon icon-visibility"></span> Quick view</b> </a>
                            <!-- /quick-view -->
