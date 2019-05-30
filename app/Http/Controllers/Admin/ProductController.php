@@ -64,25 +64,11 @@ class ProductController extends Controller
 
     /**
      * thêm dữ liệu của ảnh
-     */
-    // public function storeImage(Request $request)
-    // {
-    //     $data = array();
-    //     if($files=$request->file('image')){
-    //         foreach($files as $key =>$file){
-    //             $temp = [];
-    //             $temp['link'] = $file->store('images');
-    //             $temp['product_id'] = $request['product_id'];
-    //             $data[] = Image::create($temp);
-    //         }
-
-    //     }
-    //     return response()->json($data);
-    // }
-    
+     */    
     public function storeImage(Request $request){
         $data = array();
-        if($files=$request->file('image')){
+        if($files=$request->file('image')) {
+            
             foreach($files as $key =>$file){
                 $temp = [];
                 $temp['product_id'] = $request['product_id'];
