@@ -134,7 +134,7 @@ $(document).ready(function() {
                 // console.log(response);
                 $('#Detail_image').html("");
                 for (var i = 0; i < response.length; i++) {
-                    $('#Detail_image').append("<img class='suaAnh' id='anh-" + response[i].id + "' src='" + path + "storage/" + response[i].link + "'>" + "<i class='icon-im icon-im-cross' id='icon-" + response[i].id + "' xoaAnh='" + response[i].id + "'></i>");
+                    $('#Detail_image').append("<img class='suaAnh' id='anh-" + response[i].id + "' src='" + response[i].link + "'>" + "<i class='icon-im icon-im-cross' id='icon-" + response[i].id + "' xoaAnh='" + response[i].id + "'></i>");
                 }
             }
         })
@@ -167,7 +167,7 @@ $(document).ready(function() {
                 toastr.success('Thêm thành công!');
                 $('#DsAnh').html("");
                 response.map(function(value, index) {
-                    $('#Detail_image').append("<img class='suaAnh' id='anh-" + value.id + "' src='" + path + "/storage/" + value.link + "'>" + "<i class='icon-im icon-im-cross' id='icon-" + value.id + "' xoaAnh='" + value.id + "'></i>");
+                    $('#Detail_image').append("<img class='suaAnh' id='anh-" + value.id + "' src='" + value.link + "'>" + "<i class='icon-im icon-im-cross' id='icon-" + value.id + "' xoaAnh='" + value.id + "'></i>");
                 });
             },
             error: function(error) {}

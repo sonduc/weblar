@@ -12,6 +12,7 @@ use App\Category;
 use App\Image;
 use DB;
 use Illuminate\Support\Facades\Storage;
+use Cloudder;
 
 class ProductController extends Controller
 {
@@ -64,20 +65,43 @@ class ProductController extends Controller
     /**
      * thêm dữ liệu của ảnh
      */
-    public function storeImage(Request $request)
-    {
+    // public function storeImage(Request $request)
+    // {
+    //     $data = array();
+    //     if($files=$request->file('image')){
+    //         foreach($files as $key =>$file){
+    //             $temp = [];
+    //             $temp['link'] = $file->store('images');
+    //             $temp['product_id'] = $request['product_id'];
+    //             $data[] = Image::create($temp);
+    //         }
+
+    //     }
+    //     return response()->json($data);
+    // }
+    
+    public function storeImage(Request $request){
         $data = array();
         if($files=$request->file('image')){
             foreach($files as $key =>$file){
                 $temp = [];
-                $temp['link'] = $file->store('images');
                 $temp['product_id'] = $request['product_id'];
+
+                $image_name = $file->getRealPath();;
+
+                Cloudder::upload($image_name, null);
+                list($width, $height) = getimagesize($image_name);
+                $temp['cloudder_id'] = Cloudder::getPublicId();
+
+                $image_url= Cloudder::show(Cloudder::getPublicId(), ["width" => $width, "height"=>$height]);
+
+                $temp['link'] = $image_url;
                 $data[] = Image::create($temp);
             }
-
         }
         return response()->json($data);
     }
+
     /**
      * xóa ảnh dựa vào id
      * @param  [type] $id [description]
@@ -85,10 +109,12 @@ class ProductController extends Controller
      */
     public function destroyImage($id)
     {
-        $image=DB::table('images')->find($id)->link;
-        Storage::disk('local')->delete('public/'.$image);
+        // $image=DB::table('images')->find($id)->link;
+        // Storage::disk('local')->delete('public/'.$image);
+        //return DB::table('images')->where('id',$id)->delete();
+        $publicId= DB::table('images')->find($id)->cloudder_id;
+        Cloudder::destroyImage($publicId, null);
         return DB::table('images')->where('id',$id)->delete();
-
     }
 
     /**
@@ -130,6 +156,12 @@ class ProductController extends Controller
      */
     public function destroy($id)
     {
+        $images = Image::where('product_id',$id)->get();
+        foreach ($images as $value) {
+            Cloudder::destroyImage($value['cloudder_id'], null);
+            DB::table('images')->where('id',$value['id'])->delete();
+        }
         return DB::table('products')->where('id',$id)->delete();
     }
+
 }
