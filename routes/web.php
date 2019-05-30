@@ -52,8 +52,6 @@ Route::prefix('admin')->group(function(){
     Route::get('order_details/anyData/{id}','Admin\OrderController@orderDetails');
 });
 
-Route::get('pro/{id}','Admin\ProductController@pro');
-
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
