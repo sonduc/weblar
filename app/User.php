@@ -26,4 +26,11 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    public static function updateData($id, $data){
+        $user = User::find($id);
+        $user->update($data);
+
+        return true;
+    }
 }

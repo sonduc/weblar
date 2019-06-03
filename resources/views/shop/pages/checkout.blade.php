@@ -33,29 +33,62 @@
                         <!-- panel body -->
                         <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel">
                             <div class="panel-body">
-                                <form  id="fromCheckUser" method="post" >
-                                    @csrf
-                                    <a class="pull-right link-functional" href="#">
-                                        <span class="icon icon-create"></span>Edit
-                                    </a>
-                                    <div class="form-group">
-                                        <label for="">Tên<sup>*</sup></label>
-                                        <input type="text" class="form-control" id="nameUser">
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="">Email<sup>*</sup></label>
-                                        <input type="email" class="form-control" id="emailUser">
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="">Địa chỉ<sup>*</sup></label>
-                                        <input type="text" class="form-control" id="addressUser">
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="">Số điện thoại<sup>*</sup></label>
-                                        <input type="number" class="form-control" id="phoneUser">
-                                    </div>
+                                @guest
+                                    <form  id="fromCheckUser" method="post" >
+                                        @csrf
+                                        <a class="pull-right link-functional" href="#">
+                                            <span class="icon icon-create"></span>Edit
+                                        </a>
+                                        <div class="form-group">
+                                            <label for="">Tên<sup>*</sup></label>
+                                            <input type="text" class="form-control" id="nameUser">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="">Email<sup>*</sup></label>
+                                            <input type="email" class="form-control" id="emailUser">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="">Địa chỉ<sup>*</sup></label>
+                                            <input type="text" class="form-control" id="addressUser">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="">Số điện thoại<sup>*</sup></label>
+                                            <input type="number" class="form-control" id="phoneUser">
+                                        </div>
 
-                                </form>
+                                    </form>
+                                @else
+                                    {{-- <li class="nav-item dropdown">
+                                        <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                            {{ Auth::user()->name }} <span class="caret"></span>
+                                        </a>
+                                    </li> --}}
+
+                                    <form  id="fromCheckUser" method="post" >
+                                        @csrf
+                                        <a class="pull-right link-functional" href="#">
+                                            <span class="icon icon-create"></span>Edit
+                                        </a>
+                                        <div class="form-group">
+                                            <label for="">Tên<sup>*</sup></label>
+                                            <input type="text" class="form-control" id="nameUser" value="{{Auth::user()->name}}">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="">Email<sup>*</sup></label>
+                                            <input type="email" class="form-control" id="emailUser"  value="{{Auth::user()->email}}">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="">Địa chỉ<sup>*</sup></label>
+                                            <input type="text" class="form-control" id="addressUser" value="{{Auth::user()->address}}">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="">Số điện thoại<sup>*</sup></label>
+                                            <input type="number" class="form-control" id="phoneUser" value="{{Auth::user()->mobile}}">
+                                        </div>
+
+                                    </form>
+                                @endguest
+                            
                             </div>
                         </div>
                         <!-- /panel body -->

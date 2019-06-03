@@ -184,6 +184,15 @@
                     </ul>
                 </li>
                 <li class="">
+                    <a href="#"><i class="icon-fa icon-fa-product-hunt"></i> <span
+                            class="icon-fa arrow icon-fa-fw"></span> Sản phẩm </a>
+                    <ul aria-expanded="true" class="collapse">
+                        <li class="">
+                            <a href="{{ route('products.index') }}">Danh sách</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="">
                     <a href="#"><i class="icon-fa icon-fa-user"></i> <span
                             class="icon-fa arrow icon-fa-fw"></span> Admin </a>
                     <ul aria-expanded="true" class="collapse">
@@ -193,11 +202,11 @@
                     </ul>
                 </li>
                 <li class="">
-                    <a href="#"><i class="icon-fa icon-fa-product-hunt"></i> <span
-                            class="icon-fa arrow icon-fa-fw"></span> Sản phẩm </a>
+                    <a href="#"><i class="icon-fa icon-fa-user"></i> <span
+                            class="icon-fa arrow icon-fa-fw"></span> Người dùng </a>
                     <ul aria-expanded="true" class="collapse">
                         <li class="">
-                            <a href="{{ route('products.index') }}">Danh sách</a>
+                            <a href="{{ route('users.index') }}">Danh sách</a>
                         </li>
                     </ul>
                 </li>

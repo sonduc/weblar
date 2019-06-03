@@ -46,15 +46,18 @@ Route::prefix('admin')->group(function(){
     // Brand
     Route::get('brands/anyData','Admin\BrandController@anyData')->name('brand.anyData');
     Route::resource('brands','Admin\BrandController');
-    // Admin
-    Route::get('admins/anyData','Admin\AdminController@anyData')->name('admin.anyData');
-    Route::resource('admins','Admin\AdminController');
     // Product
     Route::get('products/anyData','Admin\ProductController@anyData')->name('product.anyData');
     Route::resource('products','Admin\ProductController');
     Route::get('products/showImage/{id}','Admin\ProductController@showImage')->name('product.showImage');
     Route::post('products/storeImage','Admin\ProductController@storeImage')->name('product.storeImage');
     Route::delete('products/deleteImage/{id}','Admin\ProductController@destroyImage')->name('product.deleteImage');
+    // Admin
+    Route::get('admins/anyData','Admin\AdminController@anyData')->name('admin.anyData');
+    Route::resource('admins','Admin\AdminController');
+    // User
+    Route::get('users/anyData','Admin\UserController@anyData')->name('admin.anyData');
+    Route::resource('users','Admin\UserController');
     // Order
     Route::get('orders/anyData','Admin\OrderController@anyData')->name('order.anyData');
     Route::resource('orders','Admin\OrderController');
