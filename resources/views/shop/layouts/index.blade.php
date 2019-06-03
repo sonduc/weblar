@@ -139,13 +139,44 @@
 										<span class="icon icon-person "></span>
 									</a>
 									<ul class="dropdown-menu dropdown-menu--xs-full">
-										<li><a href="login_form.html"><span class="icon icon-person"></span>My Account</a></li>
-										<li><a href="wishlist.html"><span class="icon icon-favorite_border"></span>My Wishlist</a></li>
-										<li><a href="compare.html"><span class="icon icon-sort"></span>Compare</a></li>
-										<li><a href="checkout-step.html"><span class="icon icon-done_all"></span>Checkout</a></li>
-										<li><a href="#"  data-toggle="modal" data-target="#modalLoginForm"><span class="icon icon-lock"></span>Log In</a></li>
-										<li><a href="login_form.html"><span class="icon icon-person_add"></span>Create an account</a></li>
-										<li class="dropdown-menu__close"><a href="#"><span class="icon icon-close"></span>close</a></li>
+									    {{-- <li>
+									   		<a href="login_form.html"><span class="icon icon-person"></span>My Account</a>
+									   	</li>
+									   	<li>
+									   		<a href="wishlist.html"><span class="icon icon-favorite_border"></span>My Wishlist</a>
+										</li>
+									    <li>
+										   	<a href="compare.html"><span class="icon icon-sort"></span>Compare</a>
+										</li>
+									    <li>
+										   	<a href="checkout-step.html"><span class="icon icon-done_all"></span>Checkout</a>
+										</li> --}}
+										@guest
+										    <li>
+											   	<a href="{{ route('shop.login') }}">
+											   		<span class="icon icon-lock"></span>Đăng nhập
+											   	</a>
+											</li>
+											   <li>
+											   	<a href="{{ route('shop.register') }}">
+											   		<span class="icon icon-person_add"></span>Tạo tài khoản
+											   	</a>
+											</li>
+											   <li class="dropdown-menu__close">
+											   	<a href="#"><span class="icon icon-close"></span>close</a>
+											</li>
+										@else
+											<li>
+											   	<a href="{{ route('shop.logout') }}" onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+											   		<span class="icon icon-lock"></span>Thoát
+											   	</a>
+											   	
+												<form id="logout-form" action="{{ route('shop.logout') }}" method="POST" style="display: none;">
+			                                        @csrf
+			                                    </form>
+											</li>
+										@endguest
 									</ul>
 								</div>
 							</div>

@@ -12,7 +12,16 @@
 */
 Route::get('logs', '\Rap2hpoutre\LaravelLogViewer\LogViewerController@index');
 
+
 Route::prefix('shop')->group(function (){
+    Route::get('login', 'Shop\LoginController@showLoginForm')->name('shop.login');
+    Route::post('login', 'Shop\LoginController@login')->name('shop.post.login');
+    Route::post('logout', 'Shop\LoginController@logout')->name('shop.logout');
+
+    Route::get('register', 'Shop\RegisterController@showRegistrationForm')->name('shop.register');
+    Route::post('register', 'Shop\RegisterController@register')->name('shop.post.register');
+
+
     Route::get('/','Shop\ShopController@index')->name('shop.index');
     Route::get('modalDetail/{id}','Shop\ShopController@modalDetail')->name('shop.modalDetail');
     Route::get('product/{id}','Shop\ShopController@product')->name('shop.product');
