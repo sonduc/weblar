@@ -73,6 +73,13 @@
 			background-color: #f5f5f5;
     		color: #f2b028;
 		}
+		.table-total tfoot tr td{
+			font-size: smaller;
+		}
+		.shopping-cart-table__product-price{
+			line-height: 1.1;
+			font-size: 25px;
+		}
 	</style>
 <!-- Head Libs -->
 <!-- Modernizr -->
