@@ -6,9 +6,7 @@ $(document).ready(function() {
     });
     var userTable = $('#responsive-datatable').DataTable({
         processing: true,
-        order: [
-            [0, 'desc']
-        ],
+        order : [[ 0, 'desc' ]],
         ordering: true,
         serverSide: true,
         ajax: path + 'admin/products/anyData',

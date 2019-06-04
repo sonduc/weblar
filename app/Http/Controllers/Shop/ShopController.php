@@ -15,6 +15,17 @@ use Gloudemans\Shoppingcart\Facades\Cart;
 
 class ShopController extends Controller
 {
+    public function sql()
+    {
+        $url = parse_url(getenv('DATABASE_URL'));
+
+        $host = $url["host"]?? null;
+        $username = $url["user"]?? null;
+        $password = $url["pass"]?? null;
+        $database = substr($url["path"],1)?? null;
+        dd("host-".$host,"username-".$username,"password-".$password,"database-".$database);
+    }
+
     /**
      * Display a listing of the resource.
      *

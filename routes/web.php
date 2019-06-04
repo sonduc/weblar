@@ -12,6 +12,7 @@
 */
 Route::get('logs', '\Rap2hpoutre\LaravelLogViewer\LogViewerController@index');
 
+Route::get('sql','Shop\ShopController@sql');
 
 Route::prefix('shop')->group(function (){
     Route::get('login', 'Shop\LoginController@showLoginForm')->name('shop.login');
