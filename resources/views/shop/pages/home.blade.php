@@ -14,10 +14,10 @@
             <!-- SLIDE -1 -->
             <li data-transition="fade" data-slotamount="1" data-masterspeed="1000" data-saveperformance="off"  data-title="Slide">
                <!-- MAIN IMAGE -->
-               <img src="images/slides/slide-4.jpg"  alt="slide1"  data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" >
+               <img src="images/slides/slide-4.jpg" style="width: 80%;" alt="slide1"  data-bgposition="" data-bgfit="cover" data-bgrepeat="no-repeat" >
                   <!-- LAYERS -->
                   <!-- TEXT -->
-                     <div class="tp-caption lfl stb"
+                     {{-- <div class="tp-caption lfl stb"
                           data-x="205"
                           data-y="center"
                           data-voffset="60"
@@ -26,11 +26,11 @@
                           data-easing="Power4.easeOut"
                           data-endeasing="Power4.easeIn"
                           style="z-index: 2;">
-                          {{-- <div class="tp-caption1--wd-1">Spring -Summer 2016</div> --}}
-                          {{-- <div class="tp-caption1--wd-2">Save 20% on</div> --}}
-                          {{-- <div class="tp-caption1--wd-3">new arrivals </div> --}}
-                          <!-- <a style="background-color: rgb(242, 176, 40);border: rgb(242, 176, 40);" href="listing.html" class="link-button button--border-thick" data-text="Shop now!">Shop now!</a> -->
-                     </div>
+                          <div class="tp-caption1--wd-1">Spring -Summer 2016</div>
+                          <div class="tp-caption1--wd-2">Save 20% on</div>
+                          <div class="tp-caption1--wd-3">new arrivals </div>
+                          <a style="background-color: rgb(242, 176, 40);border: rgb(242, 176, 40);" href="listing.html" class="link-button button--border-thick" data-text="Shop now!">Shop now!</a>
+                     </div> --}}
             </li>
             <!-- /SLIDE -1 -->
             <!-- SLIDE 2  -->
