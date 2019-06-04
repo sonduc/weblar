@@ -63,7 +63,10 @@
 							</div>
 							<div class="divider divider--xs product-info__divider hidden-xs"></div>
 							<div class="product-info__description hidden-xs">
-								<div class="product-info__description__brand"><img src="images/custom/brand.png"  alt="" /> </div>
+								<div class="product-info__description__brand">
+									<!-- <img src="images/custom/brand.png"  alt="" /> --> 
+									<img style="width: 18%" src="images/logo-shop2.png"  alt="" />
+								</div>
 								<div class="product-info__description__text">{!! $product->description !!}</div>
 							</div>
 							<div class="divider divider--xs product-info__divider"></div>

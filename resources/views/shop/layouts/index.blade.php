@@ -48,6 +48,31 @@
 		.title-under:after{
 		    background: #f2b028;
 		}
+		.btn--ys.btn--light span{
+		    color: #f2b028;
+		}
+		.shopping-cart-table a{
+			color: #f2b028;
+		}
+		.colorVang{
+			color: #f2b028;
+		}
+		.table-total td{
+			color: #f2b028;
+		}
+		.order-review-table__product-price{
+			color: #f2b028;
+		}
+		.panel .panel-heading.active .panel-heading__number{
+			background-color: #f2b028;
+		}
+		.btn--ys{
+			background-color: #f2b028;
+		}
+		.btn--ys:hover{
+			background-color: #f5f5f5;
+    		color: #f2b028;
+		}
 	</style>
 <!-- Head Libs -->
 <!-- Modernizr -->
@@ -76,7 +101,9 @@
 			<div class="row">
 				<div class="col-sm-12 col-md-12 col-lg-12 col-xl-12" style="text-align: center;">
 					<!-- logo start -->
-					<a href="index.html"><img style="width: 17%" class="logo replace-2x img-responsive" src="images/logo-shop.jpg" alt=""/> </a>
+					<a href="{{ asset('shop') }}">
+						<img style="width: 17%;max-height: 120px" class="logo replace-2x img-responsive" src="images/logo-shop2.png" alt=""/> 
+					</a>
 					<!-- logo end -->
 				</div>
 			</div>

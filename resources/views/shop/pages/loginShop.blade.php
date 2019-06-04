@@ -21,7 +21,7 @@
             <div class="divider divider--md visible-sm visible-xs"></div>
             <section class="col-sm-12 col-md-6 col-lg-6 col-xl-4">
                 <div class="login-form-box">
-                    <h3 class="color small">Thông Tin</h3>
+                    <h3 class="color small colorVang">Thông Tin</h3>
                     <p>
                         If you have an account with us, please log in.
                     </p>

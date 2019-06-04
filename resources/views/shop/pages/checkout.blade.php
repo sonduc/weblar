@@ -126,20 +126,20 @@
                                             @foreach (Cart::content() as $row)
                                             <tr class="tr-checkout">
                                                 <td>
-                                                    <h5 class="order-review-table__product-name text-left text-uppercase">
+                                                    <h5 class="order-review-table__product-name text-left text-uppercase colorVang">
                                                         <a href="product.html">{{$row->name}}</a>
                                                     </h5>
                                                 </td>
                                                 <td>
-                                                    <div class="order-review-table__product-price unit-price">
+                                                    <div class="order-review-table__product-price unit-price colorVang">
                                                         {{ number_format($row->price)}}.VNĐ
                                                     </div>
                                                 </td>
                                                 <td>
-                                                    <span class="color">{{$row->qty}}</span>
+                                                    <span class="color colorVang">{{$row->qty}}</span>
                                                 </td>
                                                 <td>
-                                                    <div class="order-review-table__product-price subtotal">
+                                                    <div class="order-review-table__product-price subtotal colorVang">
                                                         {{ number_format($row->price*$row->qty)}}.VNĐ
                                                     </div>
                                                 </td>
@@ -171,12 +171,13 @@
                                                     </tfoot>
                                                 </table>
                                                 <p class="clearfix text-right">
-                                                    <a id="form-user" class="btn btn--ys btn--xl">
+                                                    <a id="form-user" class="btn btn--ys btn--xl" style="background-color:#f2b028;">
                                                         Đặt hàng <span class="icon icon--flippedX icon-reply"></span>
                                                     </a>
                                                 </p>
                                                 <div class="text-right link-top">
-                                                    <span class="color-dark">Forgot an Item?</span> <a class="link-underline" href="#">Edit Your Cart</a>
+                                                    <span class="color-dark">Forgot an Item?</span>
+                                                    <a class="link-underline" href="#">Edit Your Cart</a>
                                                 </div>
                                             </div>
                                         </div>

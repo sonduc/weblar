@@ -53,7 +53,7 @@
 									<a class="shopping-cart-table__delete icon icon-delete visible-xs" href="#"></a>
 								</td>
 								<td style="width: 32%">
-									<div class="shopping-cart-table__product-price unit-price">
+									<div class="shopping-cart-table__product-price unit-price colorVang">
 										{{ number_format($row->price)}}.VNĐ
 									</div>
 								</td>
@@ -120,7 +120,9 @@
 							</tr>
 						</tfoot>
 					</table>
-					<a href="{{ route('shop.getCheckout') }}" class="btn btn--ys btn--full btn--xl">Thanh toán<span class="icon icon-reply icon--flippedX"></span></a>
+					<a style="background-color: #f2b028; " href="{{ route('shop.getCheckout') }}" class="btn btn--ys btn--full btn--xl">
+						Thanh toán<span class="icon icon-reply icon--flippedX"></span>
+					</a>
 					<div class="text-right link-top">
 						<a class="link-underline">Checkout with Multiple Addresses</a>
 					</div>
