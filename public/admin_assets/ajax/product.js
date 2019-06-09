@@ -26,6 +26,7 @@ $(document).ready(function() {
         $.ajax({
             type: 'post',
             url: path + 'admin/products',
+            headers: {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')},
             data: {
                 code: $('#code').val(),
                 name: $('#name').val(),
