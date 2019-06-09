@@ -9,7 +9,7 @@
 	<meta name="author" content="etheme.com">
 	<meta name="csrf-token" content="{{ csrf_token() }}">
 	<base href="{{ asset('shop_assets') }}/">
-	<link rel="shortcut icon" href="favicon.ico">
+	<link rel="shortcut icon" href="logo.png">
 	<!-- Mobile Specific Metas -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<!-- External Plugins CSS -->
@@ -109,7 +109,7 @@
 				<div class="col-sm-12 col-md-12 col-lg-12 col-xl-12" style="text-align: center;">
 					<!-- logo start -->
 					<a href="{{ asset('shop') }}">
-						<img style="width: 17%;max-height: 120px" class="logo replace-2x img-responsive" src="images/logo-shop2.png" alt=""/> 
+						<img style="width: 17%;max-height: 120px" class="logo replace-2x img-responsive" src="logo-title.jpg" alt=""/> 
 					</a>
 					<!-- logo end -->
 				</div>
