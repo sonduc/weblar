@@ -14,7 +14,7 @@
             <!-- SLIDE -1 -->
             <li data-transition="fade" data-slotamount="1" data-masterspeed="1000" data-saveperformance="off"  data-title="Slide">
                <!-- MAIN IMAGE -->
-               <img src="images/slides/slide-4.jpg" style="width: 80%;" alt="slide1"  data-bgposition="" data-bgfit="cover" data-bgrepeat="no-repeat" >
+               <img src="images/slides/LauDoAn.jpg" style="width: 80%;" alt="slide1"  data-bgposition="" data-bgfit="cover" data-bgrepeat="no-repeat" >
                   <!-- LAYERS -->
                   <!-- TEXT -->
                      {{-- <div class="tp-caption lfl stb"
@@ -35,12 +35,12 @@
             <!-- /SLIDE -1 -->
             <!-- SLIDE 2  -->
 
-            <!-- <li data-transition="fade" data-slotamount="1" data-masterspeed="1000" data-saveperformance="off"  data-title="Slide">
+            <li data-transition="fade" data-slotamount="1" data-masterspeed="1000" data-saveperformance="off"  data-title="Slide">
                    MAIN IMAGE
-               <img src="images/slides/slide-2.jpg"  alt="slide2"  data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat">
+               <img src="images/slides/MonAn.jpg"  alt="slide2"  data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat">
                   LAYERS
                   TEXT
-                     <div class="tp-caption lfr stb"
+                     {{-- <div class="tp-caption lfr stb"
                           data-x="right"
                           data-y="center"
                           data-voffset="-5"
@@ -50,12 +50,12 @@
                           data-easing="Power4.easeOut"
                           data-endeasing="Power4.easeIn"
                           style="z-index: 2;">
-                          {{-- <div class="tp-caption2--wd-1">A great selection of superb brands </div> --}}
-                          {{-- <div class="tp-caption2--wd-2">50% off</div> --}}
-                          {{-- <div class="tp-caption2--wd-3">on all clothes</div> --}}
+                          <div class="tp-caption2--wd-1">A great selection of superb brands </div>
+                          <div class="tp-caption2--wd-2">50% off</div>
+                          <div class="tp-caption2--wd-3">on all clothes</div>
                           <a style="background-color: rgb(242, 176, 40);border: rgb(242, 176, 40);" href="listing.html" class="link-button button--border-thick pull-right" data-text="Shop now!">Shop now!</a>
-                     </div>
-            </li> -->
+                     </div> --}}
+            </li>
 
             <!-- /SLIDE 2  -->
             </ul>
