@@ -72,7 +72,7 @@
             <div class="col-lg-12 col-xl-8">
                <!-- title -->
                <div class="title-box">
-                  <h2 class="text-center text-uppercase title-under">Các sản phẩm thuốc</h2>
+                  <h2 class="text-center text-uppercase title-under">Các móm ẩm thực</h2>
                </div>
                <!-- /title -->
                @foreach ($products as $product)
